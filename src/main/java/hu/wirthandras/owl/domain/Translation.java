@@ -9,7 +9,7 @@ public class Translation implements Comparable<Translation> {
 	public int occurences;
 	public int answered;
 	public int correct;
-	public String percent;
+	public int percent;
 	
 	public Translation() {
 	
@@ -63,19 +63,17 @@ public class Translation implements Comparable<Translation> {
 		this.correct = correct;
 	}
 
-	public String getPercent() {
+	@Override
+	public int compareTo(Translation o) {
+		return Integer.compare(percent, o.getPercent());
+	}
+
+	public int getPercent() {
 		return percent;
 	}
 
-	public void setPercent(String percent) {
+	public void setPercent(int percent) {
 		this.percent = percent;
-	}
-
-	@Override
-	public int compareTo(Translation o) {
-		return percent.compareTo(o.getPercent());
-	}
-	
-	
+	}	
 	
 }

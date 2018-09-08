@@ -17,7 +17,7 @@
 		<tr th:each="text : ${#lists.sort(texts)}">
 			<td th:text="${text.base}">Szöveg</td>
 			<td th:text="${text.translation}">Fordítás</td>
-			<td th:text="${text.percent}">Találati százalék</td>
+			<td th:text="${text.percent + '%'}">Találati százalék</td>
 		</tr>
 	</table>
 
