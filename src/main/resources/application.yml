@@ -2,5 +2,5 @@
 owl: 
   target: 
     server: 
-      url: SILION_API_JSON_URL
+      url: "https://silion.herokuapp.com/api/json"
   
