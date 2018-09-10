@@ -8,19 +8,31 @@
 
 <body>
 	<table>
-		<caption>Top</caption>
+		<caption>Best 10</caption>
 		<tr class="header">
 			<th>A szöveg</th>
 			<th>A fordítás</th>
 			<th>Találati százalék</th>
 		</tr>
-		<tr th:each="text : ${#lists.sort(texts)}">
+		<tr th:each="text : ${bests}">
 			<td th:text="${text.base}">Szöveg</td>
 			<td th:text="${text.translation}">Fordítás</td>
 			<td th:text="${text.percent + '%'}">Találati százalék</td>
 		</tr>
 	</table>
-
+	<table>
+		<caption>Worst 10</caption>
+		<tr class="header">
+			<th>A szöveg</th>
+			<th>A fordítás</th>
+			<th>Találati százalék</th>
+		</tr>
+		<tr th:each="text : ${worsts}">
+			<td th:text="${text.base}">Szöveg</td>
+			<td th:text="${text.translation}">Fordítás</td>
+			<td th:text="${text.percent + '%'}">Találati százalék</td>
+		</tr>
+	</table>
 </body>
 
 </html>

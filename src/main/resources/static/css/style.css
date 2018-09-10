@@ -5,9 +5,15 @@ body {
 }
 
 table {
-	background-color: #b23131;
+/* 	background-color: #b23131; */
 	border-radius: 5px;
 	padding: 1em;
+	
+}
+
+table {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 caption {
