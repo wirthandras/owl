@@ -13,7 +13,6 @@ public class OwlService {
     private String path;
 
 	public Translation[] getTexts() {
-		System.out.println(path);
 		RestTemplate restTemplate = new RestTemplate();
 		Translation[] result = restTemplate.getForObject(path, Translation[].class);
 		return result;
