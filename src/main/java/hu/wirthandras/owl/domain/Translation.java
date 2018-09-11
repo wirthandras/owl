@@ -1,7 +1,6 @@
 package hu.wirthandras.owl.domain;
 
 public class Translation implements Comparable<Translation> {
-
 	
 	public int id;
 	public String base;

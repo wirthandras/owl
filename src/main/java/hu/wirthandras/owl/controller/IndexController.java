@@ -15,19 +15,20 @@ public class IndexController {
 
 	@RequestMapping("/")
 	public String home(Model model) {
-		model.addAttribute("best", service.getBestTen());
-		model.addAttribute("worst", service.getWorstTen());
-		model.addAttribute("frequent", service.getFrequentTen());
-		model.addAttribute("rare", service.getRareTen());
+		addAttributes(model);
 		return "index";
 	}
 	
 	@RequestMapping("/index")
 	public String index(Model model) {
+		addAttributes(model);
+		return "index";
+	}
+	
+	private void addAttributes(Model model) {
 		model.addAttribute("bests", service.getBestTen());
 		model.addAttribute("worsts", service.getWorstTen());
 		model.addAttribute("frequent", service.getFrequentTen());
 		model.addAttribute("rare", service.getRareTen());
-		return "index";
 	}
 }
