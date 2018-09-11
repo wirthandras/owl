@@ -8,29 +8,59 @@
 
 <body>
 	<table>
-		<caption>Best 10</caption>
+		<caption>Legjobb 10</caption>
 		<tr class="header">
 			<th>A szöveg</th>
 			<th>A fordítás</th>
 			<th>Találati százalék</th>
 		</tr>
-		<tr th:each="text : ${bests}">
+		<tr th:each="text : ${best}">
 			<td th:text="${text.base}">Szöveg</td>
 			<td th:text="${text.translation}">Fordítás</td>
 			<td th:text="${text.percent + '%'}">Találati százalék</td>
 		</tr>
 	</table>
 	<table>
-		<caption>Worst 10</caption>
+		<caption>Legrosszabb 10</caption>
 		<tr class="header">
 			<th>A szöveg</th>
 			<th>A fordítás</th>
 			<th>Találati százalék</th>
 		</tr>
-		<tr th:each="text : ${worsts}">
+		<tr th:each="text : ${worst}">
 			<td th:text="${text.base}">Szöveg</td>
 			<td th:text="${text.translation}">Fordítás</td>
 			<td th:text="${text.percent + '%'}">Találati százalék</td>
+		</tr>
+	</table>
+	<table>
+		<caption>Leggyakrabb 10</caption>
+		<tr class="header">
+			<th>A szöveg</th>
+			<th>A fordítás</th>
+			<th>Találati százalék</th>
+			<th>Előfordulás</th>
+		</tr>
+		<tr th:each="text : ${frequent}">
+			<td th:text="${text.base}">Szöveg</td>
+			<td th:text="${text.translation}">Fordítás</td>
+			<td th:text="${text.percent + '%'}">Találati százalék</td>
+			<td th:text="${text.occurences}">Előfordulás</td>
+		</tr>
+	</table>
+	<table>
+		<caption>Legritkább 10</caption>
+		<tr class="header">
+			<th>A szöveg</th>
+			<th>A fordítás</th>
+			<th>Találati százalék</th>
+			<th>Előfordulás</th>
+		</tr>
+		<tr th:each="text : ${rare}">
+			<td th:text="${text.base}">Szöveg</td>
+			<td th:text="${text.translation}">Fordítás</td>
+			<td th:text="${text.percent + '%'}">Találati százalék</td>
+			<td th:text="${text.occurences}">Előfordulás</td>
 		</tr>
 	</table>
 </body>
