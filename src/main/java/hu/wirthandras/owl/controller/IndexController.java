@@ -26,8 +26,8 @@ public class IndexController {
 	}
 	
 	private void addAttributes(Model model) {
-		model.addAttribute("bests", service.getBestTen());
-		model.addAttribute("worsts", service.getWorstTen());
+		model.addAttribute("best", service.getBestTen());
+		model.addAttribute("worst", service.getWorstTen());
 		model.addAttribute("frequent", service.getFrequentTen());
 		model.addAttribute("rare", service.getRareTen());
 	}
