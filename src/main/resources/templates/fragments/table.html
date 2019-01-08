@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<table th:fragment="table (caption, source)">
+		<caption th:text="${caption}">Legjobb 10</caption>
+		<tr class="header">
+			<th>A szöveg</th>
+			<th>A fordítás</th>
+			<th>Találati százalék</th>
+			<th>Előfordulás</th>
+		</tr>
+		<tr th:each="text : ${source}">
+			<td th:text="${text.base}">Szöveg</td>
+			<td th:text="${text.translation}">Fordítás</td>
+			<td th:text="${text.percent + '%'}">Találati százalék</td>
+			<td th:text="${text.occurences}">Előfordulás</td>
+		</tr>
+	</table>
+</body>
