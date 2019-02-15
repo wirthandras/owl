@@ -10,4 +10,4 @@ ARG JAR_FILE=target/Owl-0.0.1-SNAPSHOT.jar
 
 ADD ${JAR_FILE} Owl.jar
 
-ENTRYPOINT ["java", "-jar","/Owl.jar"]
+ENTRYPOINT ["java", "-jar","-Dowl.target.server.url=${OWL_URL}","/Owl.jar"]
