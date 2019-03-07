@@ -14,8 +14,7 @@ public class RemoteService {
 
 	public Translation[] getTexts() {
 		RestTemplate restTemplate = new RestTemplate();
-		Translation[] result = restTemplate.getForObject(path, Translation[].class);
-		return result;
+		return restTemplate.getForObject(path, Translation[].class);
 	}
 
 }
