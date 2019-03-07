@@ -1,7 +1,7 @@
 package hu.wirthandras.owl.domain;
 
 public class Translation implements Comparable<Translation> {
-	
+
 	private int id;
 	private String base;
 	private String translation;
@@ -9,10 +9,6 @@ public class Translation implements Comparable<Translation> {
 	private int answered;
 	private int correct;
 	private int percent;
-	
-	public Translation() {
-	
-	}
 
 	public int getId() {
 		return id;
@@ -73,6 +69,6 @@ public class Translation implements Comparable<Translation> {
 
 	public void setPercent(int percent) {
 		this.percent = percent;
-	}	
-	
+	}
+
 }
