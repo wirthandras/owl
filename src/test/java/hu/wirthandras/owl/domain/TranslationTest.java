@@ -22,8 +22,8 @@ public class TranslationTest {
 	public void setup() {
 		a = new Translation();
 		b = new Translation();
-		a.percent = 10;
-		b.percent = 50;
+		a.setPercent(10);
+		b.setPercent(50);
 	}
 
 	@Test
@@ -33,7 +33,7 @@ public class TranslationTest {
 
 	@Test
 	public void testComparePercentageEquals() {
-		a.percent = 50;
+		a.setPercent(50);
 		Assert.assertEquals(0, a.compareTo(b));
 		Assert.assertEquals(0, b.compareTo(a));
 	}

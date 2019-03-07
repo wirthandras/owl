@@ -2,13 +2,13 @@ package hu.wirthandras.owl.domain;
 
 public class Translation implements Comparable<Translation> {
 	
-	public int id;
-	public String base;
-	public String translation;
-	public int occurences;
-	public int answered;
-	public int correct;
-	public int percent;
+	private int id;
+	private String base;
+	private String translation;
+	private int occurences;
+	private int answered;
+	private int correct;
+	private int percent;
 	
 	public Translation() {
 	
