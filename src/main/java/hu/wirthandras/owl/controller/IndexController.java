@@ -3,7 +3,7 @@ package hu.wirthandras.owl.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import hu.wirthandras.owl.service.OwlService;
 
@@ -13,13 +13,13 @@ public class IndexController {
 	@Autowired
 	private OwlService service;
 
-	@RequestMapping("/")
+	@GetMapping("/")
 	public String home(Model model) {
 		addAttributes(model);
 		return "index";
 	}
 	
-	@RequestMapping("/index")
+	@GetMapping("/index")
 	public String index(Model model) {
 		addAttributes(model);
 		return "index";
