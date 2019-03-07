@@ -8,13 +8,18 @@ import hu.wirthandras.owl.domain.Translation;
 
 @Service
 public class RemoteService {
-	
+
 	@Value("${owl.target.server.url}")
 	private String path;
 
+	private RestTemplate restTemplate = new RestTemplate();
+
 	public Translation[] getTexts() {
-		RestTemplate restTemplate = new RestTemplate();
 		return restTemplate.getForObject(path, Translation[].class);
+	}
+
+	RestTemplate getRestTemplate() {
+		return restTemplate;
 	}
 
 }
