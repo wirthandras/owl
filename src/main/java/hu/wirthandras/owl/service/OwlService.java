@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import hu.wirthandras.owl.domain.Translation;
 import hu.wirthandras.owl.domain.comparator.FrequentComparator;
+import hu.wirthandras.owl.domain.comparator.PercentComparator;
 
 @Service
 public class OwlService {
@@ -23,13 +24,13 @@ public class OwlService {
 
 	public List<Translation> getBestTen() {
 		List<Translation> t = getTranslations();
-		sort(t, reverseOrder());
+		sort(t, reverseOrder(new PercentComparator()));
 		return t.subList(START_INDEX, ELEMENTS_IN_LIST);
 	}
 
 	public List<Translation> getWorstTen() {
 		List<Translation> t = getTranslations();
-		sort(t);
+		sort(t, new PercentComparator());
 		return t.subList(START_INDEX, ELEMENTS_IN_LIST);
 	}
 

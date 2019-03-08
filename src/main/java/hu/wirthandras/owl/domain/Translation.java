@@ -1,6 +1,6 @@
 package hu.wirthandras.owl.domain;
 
-public class Translation implements Comparable<Translation> {
+public class Translation {
 
 	private int id;
 	private String base;
@@ -56,11 +56,6 @@ public class Translation implements Comparable<Translation> {
 
 	public void setCorrect(int correct) {
 		this.correct = correct;
-	}
-
-	@Override
-	public int compareTo(Translation o) {
-		return Integer.compare(percent, o.getPercent());
 	}
 
 	public int getPercent() {
