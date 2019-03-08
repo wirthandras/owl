@@ -3,7 +3,6 @@ package hu.wirthandras.owl.service;
 import static java.util.Collections.reverseOrder;
 import static java.util.Collections.sort;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -16,8 +15,8 @@ import hu.wirthandras.owl.domain.comparator.FrequentComparator;
 @Service
 public class OwlService {
 
-	private final int ELEMENTS_IN_LIST = 10;
-	private final int START_INDEX = 0;
+	private final static int ELEMENTS_IN_LIST = 10;
+	private final static int START_INDEX = 0;
 
 	@Autowired
 	private RemoteService remoteService;
@@ -47,8 +46,7 @@ public class OwlService {
 	}
 
 	private List<Translation> getTranslations() {
-		List<Translation> t = new ArrayList<Translation>(Arrays.asList(remoteService.getTexts()));
-		return t;
+		return Arrays.asList(remoteService.getTexts());
 	}
 
 }
