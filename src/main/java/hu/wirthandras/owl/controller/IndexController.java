@@ -13,14 +13,8 @@ public class IndexController {
 	@Autowired
 	private OwlService service;
 
-	@GetMapping("/")
+	@GetMapping(value = {"/", "/index"})
 	public String home(Model model) {
-		addAttributes(model);
-		return "index";
-	}
-	
-	@GetMapping("/index")
-	public String index(Model model) {
 		addAttributes(model);
 		return "index";
 	}
