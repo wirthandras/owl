@@ -15,8 +15,8 @@ import hu.wirthandras.owl.domain.comparator.FrequentComparator;
 @Service
 public class OwlService {
 
-	private final static int ELEMENTS_IN_LIST = 10;
-	private final static int START_INDEX = 0;
+	private static final int ELEMENTS_IN_LIST = 10;
+	private static final int START_INDEX = 0;
 
 	@Autowired
 	private RemoteService remoteService;
