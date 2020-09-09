@@ -1,8 +1,7 @@
 pipeline {
-    agent {
-        //docker { image 'zenika/alpine-maven' }
-        any        
-    }
+    agent any
+    //docker { image 'zenika/alpine-maven' }
+
     stages {
         stage('Checkout') {
           steps{
